@@ -1,4 +1,4 @@
-Réalisation d'une application de forum
+# Réalisation d'une application de forum
 
 --> Le choix des technologies vous appartient
 --> L'application doit respecter au minimum les éléments demandés par le client
@@ -7,12 +7,29 @@ Réalisation d'une application de forum
 --> Votre application peut posséder quelques tests unitaires
 --> Acun bug dans la console ne doit apparaître
 
-Critères de notation : 
+# Critères de notation : 
+
 1. Toutes les demandes du client sont respectées
 2. Aucun bug n'est visible en console
 3. Des tests unitaires sont présents dans votre application
 4. L'application se lance correctement uniquement avec un docker compose up
 5. Bonus : des fonctionnalités ont été ajoutées
+
+# Lancement
+
+1. Dans une invite de commande, naviguez jusqu'à la racine du projet (contenant le docker-compose.yml)
+2. Lancez la commande suivante : docker-compose -f docker.compose.yml up -d
+	Information: pour voir votre database, vous pouvez utiliser phpmyadmin sur votre navigateur en allant à l'url suivant: http://localhost:8081/
+	Utilisateur : root
+	Mot de passe : password
+3. Lancez le Backend (forum)
+4. Lancez le Frontend
+	5A Naviguez, avec votre invite de commande, a la racine du frontend (forum/forum-front)
+	5B. Utilisez la commande suivante : ng serve -o
+5. Sur le site, cliquez sur le bouton, et créez un utilisateur
+6. Connectez vous grâce à l'identifiant créé
+7. Cliquez sur forum pour accéder au forum
+
  
 # ForumFront
 

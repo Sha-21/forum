@@ -1,0 +1,9 @@
+CREATE SCHEMA `forum` ;
+
+INSERT INTO forum.roles(name)
+VALUES("USER"), ("MODERATOR"), ("ADMIN");
+SELECT * FROM forum.roles;
+
+INSERT INTO forum.sections VALUES ( 1, 'Section consacrée aux pingouins', 'Pingouin qui vole bien');
+INSERT INTO forum.sections VALUES ( 2, 'Section consacrée aux loutres', 'Loutre qui court bien');
+INSERT INTO forum.sections VALUES ( 3, 'Section consacrée aux crocodiles', 'Crocodile qui nage bien');
