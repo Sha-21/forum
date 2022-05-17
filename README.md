@@ -1,3 +1,5 @@
+# ALLER SUR LA BRANCHE MAIN (pas master)
+
 # Réalisation d'une application de forum
 
 --> Le choix des technologies vous appartient
