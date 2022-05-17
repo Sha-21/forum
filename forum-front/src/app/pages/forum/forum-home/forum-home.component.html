@@ -1,0 +1,13 @@
+<main class="forum-main">
+  <section class="forum-section">
+    <h1>FORUM</h1>
+    <div id="sections" class="flex-column">
+      <ng-container *ngFor="let section of sections" >
+      <article routerLink="/forum-section/{{section.id}}" class="cursor-pointer">
+        <h2 class="shadow">{{section.title}}</h2>
+        <p class="shadow">{{section.detail}}</p>
+      </article>
+      </ng-container>
+    </div>
+  </section>
+</main>

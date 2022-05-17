@@ -1,0 +1,5 @@
+<app-navbar *ngIf="user !== null"></app-navbar>
+<section id="main-section">
+  <router-outlet></router-outlet>
+</section>
+<app-footer *ngIf="user !== null"></app-footer>

@@ -1,0 +1,40 @@
+<main class="forum-main" *ngIf="sujet">
+  <section class="forum-section">
+    <h1>{{sujet.title}} <span>créé par :  {{sujet.author.username}}</span></h1>
+    <article class="shadow message">
+      <p [innerHTML]="sujet.firstMessage"></p>
+      <div class="flex-row">
+        <p>Posté par : {{sujet.author.username}}</p>
+        <div *ngIf="isCurrentUserIdEqualsAuthorId(sujet.author.id)" class="button flex-row shadow cursor-pointer">
+          <img src="/assets/icons/sujet.png" alt="icone editer">
+          <p>Éditer</p>
+        </div>
+      </div>
+    </article>
+    <div class = "container" *ngFor="let message of messages; let i = index">
+      <article class="shadow message" *ngIf="messages">
+        <p [innerHTML]="message.content"></p>
+        <div class="flex-row">
+          <p>Posté par : {{message.author.username}}, le : {{message.createdAt | date : 'dd-MM-yyyy'}}</p>
+          <div *ngIf="isCurrentUserIdEqualsAuthorId(message.author.id)" class="button flex-row shadow cursor-pointer"
+               (click)="clickedIndex = i">
+            <img (click)="editMessage()" src="/assets/icons/sujet.png"
+                 alt="icone editer">
+            <p (click)="editMessage()">Éditer</p>
+          </div>
+        </div>
+        <img class="cursor-pointer"  src="/assets/icons/like.png" alt="likes" (click)="increaseLike(message.id); reloadCurrentPage()">
+        <img class="cursor-pointer"  src="/assets/icons/dislike.png" alt="dislike" (click)="decreaseLike(message.id); reloadCurrentPage()">
+        <p>{{message.likes}}</p>
+        <app-edit-message *ngIf="isEditedMessage && clickedIndex === i" [messageId]="message.id"></app-edit-message>
+      </article>
+    </div>
+    <div class="button flex-row shadow cursor-pointer">
+      <img (click)="createMessage()" *ngIf="!newMessage" src="/assets/icons/sujet.png" alt="icone editer">
+      <img (click)="cancelMessage()" *ngIf="newMessage" src="/assets/icons/cancel.png" alt="icone annuler">
+      <p (click)="createMessage()" *ngIf="!newMessage">Répondre</p>
+      <p (click)="cancelMessage()" *ngIf="newMessage">Annuler</p>
+    </div>
+    <app-create-message *ngIf="newMessage"></app-create-message>
+  </section>
+</main>

@@ -1,0 +1,26 @@
+section {
+  display: flex;
+  flex-direction: row;
+  background: radial-gradient(var(--blue-color) 40%, var(--dark-blue-color) 95%);
+  color: var(--white-color);
+  justify-content: space-between;
+  height: 180px;
+}
+
+li {
+  margin-top: 60px;
+  cursor: pointer;
+}
+
+#social-logos{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.logo-contact {
+  cursor: pointer;
+  width: 60px;
+  height: 60px;
+  padding-right: 30px;
+}

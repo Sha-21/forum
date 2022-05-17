@@ -1,0 +1,9 @@
+<p id="success-message" *ngIf="success">Réponse correctement modifiée !</p>
+<section class="forum-section shadow">
+  <form *ngIf="!success" [formGroup]="editMessageForm"  (ngSubmit)="editMessage(messageId)">
+    <div class="form-group input-section flex-column">
+      <angular-editor [(ngModel)]="htmlContent" [config]="config" formControlName="content" id="content"></angular-editor>
+    </div>
+    <button class="button cursor-pointer" type="submit" >Valider</button>
+  </form>
+</section>

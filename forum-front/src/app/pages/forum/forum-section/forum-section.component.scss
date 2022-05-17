@@ -1,0 +1,44 @@
+h1 {
+  background: linear-gradient(163deg, var(--dark-blue-color) 40%, var(--blue-color) 90%);
+  padding: 25px;
+  margin-top: -25px;
+  color: var(--white-color);
+  text-align: center;
+  font-size: 1.8em;
+  margin-bottom: 0
+}
+
+h3 {
+  width: 600px;
+}
+img {
+  width: 40px;
+  margin-right: 15px;
+}
+
+.image{
+  font-size: bolder;
+  color : red;
+}
+.button {
+  background-color: var(--dark-blue-color);
+  color: var(--white-color);
+  align-items: center;
+  margin-right: 35px;
+  padding: 5px 25px;
+  width: fit-content;
+}
+
+#sujets {
+  background: rgba(var(--blue-color-rgba), .5);
+  padding: 25px;
+  justify-content: space-between;
+}
+
+article {
+  margin-top: 25px;
+  background: var(--white-color);
+  padding: 5px 15px;
+  justify-content: space-between;
+  align-items: baseline;
+}

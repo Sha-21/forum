@@ -1,0 +1,31 @@
+<main class="forum-main" *ngIf="section">
+  <section class="forum-section">
+    <h1>{{section.title}}</h1>
+    <div id="sujets" class="flex-column">
+      <div class="cursor-pointer flex-row">
+        <div class="button flex-row shadow">
+          <img src="/assets/icons/return.png">
+          <p routerLink="/forum-accueil">Retour aux sections</p>
+        </div>
+        <div class="button flex-row shadow">
+          <img (click)="createSujet()" *ngIf="!newSujet" src="/assets/icons/sujet.png">
+          <img (click)="cancelSujet()" *ngIf="newSujet" src="/assets/icons/cancel.png">
+          <p (click)="createSujet()" *ngIf="!newSujet">Créer un nouveau sujet</p>
+          <p (click)="cancelSujet()" *ngIf="newSujet">Annuler</p>
+        </div>
+      </div>
+      <app-create-sujet *ngIf="newSujet"></app-create-sujet>
+      <ng-container *ngFor="let sujet of section.sujets">
+        <article class="flex-row shadow">
+          <h3 class="cursor-pointer" routerLink="/forum-sujet/{{sujet.id}}">{{sujet.title}}</h3>
+          <p class="cursor-pointer" routerLink="/forum-sujet/{{sujet.id}}">Créé par : {{sujet.author.username}}</p>
+          <div class="images">
+            <img class="cursor-pointer"  src="/assets/icons/like.png" alt="likes" (click)="increaseLike(sujet.id); reloadCurrentPage()">
+            <img class="cursor-pointer"  src="/assets/icons/dislike.png" alt="dislike" (click)="decreaseLike(sujet.id); reloadCurrentPage()">
+            <p>{{sujet.likes}}</p>
+          </div>
+        </article>
+      </ng-container>
+    </div>
+  </section>
+</main>

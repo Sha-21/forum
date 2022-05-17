@@ -1,0 +1,46 @@
+.form-card {
+  padding: 1vh 3vw 2vh 3vw;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2vh;
+}
+
+.form-group > label {
+  color: var(--dark-blue-color);
+  font-weight: bold;
+  margin-bottom: 1vh;
+}
+
+.form-group > input {
+  font-size: 1.2em;
+  width: 100%;
+  padding: 20px 20px;
+  display: inline-block;
+  border: 1px solid var(--dark-blue-color);
+  box-sizing: border-box;
+  background-color: var(--greyish);
+  box-shadow: 0px 4px 4px 0px #00000040;
+}
+
+.form-button {
+  display: flex;
+  justify-content: center;
+}
+
+.button {
+  height: 100%;
+  background-color: var(--dark-blue-color);
+  color: #FFFFFF;
+  border: none;
+  margin-top: 4vh;
+  padding: 25px 0px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  width: 35%;
+  box-shadow: 0px 4px 4px 0px #00000040;
+}

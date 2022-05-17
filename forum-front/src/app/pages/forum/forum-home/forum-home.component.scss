@@ -1,0 +1,30 @@
+h1 {
+  background: linear-gradient(163deg, var(--dark-blue-color) 40%, var(--blue-color) 90%);
+  padding: 25px;
+  margin-top: -20px;
+  color: var(--white-color);
+  text-align: center;
+  font-size: 1.8em;
+  margin-bottom: 0;
+}
+
+#sections {
+  background: rgba(var(--blue-color-rgba), .5);
+  padding: 25px;
+  justify-content: space-between;
+}
+
+h2 {
+  background: linear-gradient(163deg, var(--dark-blue-color) 40%, var(--blue-color) 90%);
+  color: var(--white-color);
+  padding: 15px 25px;
+  width: 45%;
+}
+
+article>p {
+  background-color: var(--white-color);
+  padding: 25px;
+  margin-top: -25px;
+}
+
+

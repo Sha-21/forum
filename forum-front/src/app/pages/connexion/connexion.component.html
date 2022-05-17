@@ -1,0 +1,12 @@
+<div class="header">
+  <img id="logo" src="../../../../assets/logos/Logo2.png " (click)="goToHome()" alt="logo" class="cursor-pointer">
+  <h1 class="cursor-pointer"(click)="goToHome()">Bienvenue dans le Forum</h1>
+</div>
+<div class="card">
+  <div class="row">
+    <button type="button" [ngClass]="{'active': signin}" class="button cursor-pointer" (click)="connexion()">Se connecter</button>
+    <button type="button" [ngClass]="{'active': !signin}" class="button cursor-pointer" (click)="inscription()">S'inscrire</button>
+  </div>
+  <app-signin *ngIf="signin"></app-signin>
+  <app-signup *ngIf="!signin"></app-signup>
+</div>

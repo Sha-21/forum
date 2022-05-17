@@ -1,0 +1,58 @@
+.button {
+  width: 50%;
+  height: 100%;
+  background-color: #FFFFFF;
+  color: var(--dark-blue-color);
+  border: none;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+  box-sizing: border-box;
+  border-bottom: 2px solid var(--dark-blue-color);
+  box-shadow: 0px 4px 4px 0px #00000040;
+}
+
+.active {
+  background-color: var(--dark-blue-color);
+  color: #FFFFFF;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#logo {
+  width: 100%;
+  max-width:200px;
+  height: 100%;
+}
+
+h1 {
+  font-size: 5em;
+  font-family: Franklin Gothic Medium;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 70px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: var(--dark-blue-color);
+}
+
+.row {
+  height: 5em;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 35%;
+  min-height: 26em;
+  margin: auto;
+  background-color: #FFFFFF;
+  box-shadow: 0px 4px 4px 0px #00000040;
+}

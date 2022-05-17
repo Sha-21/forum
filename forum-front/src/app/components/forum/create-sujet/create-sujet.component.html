@@ -1,0 +1,14 @@
+<p id="success-message" *ngIf="success">Nouveau sujet correctement créée !</p>
+<section class="forum-section shadow">
+  <form *ngIf="!success" [formGroup]="sujetForm"  (ngSubmit)="createSujet()">
+    <div class="form-group input-section flex-column">
+      <label for="title"> Titre:</label>
+      <input type="text" formControlName="title" id="title">
+    </div>
+    <div class="form-group input-section flex-column">
+      <label for="firstMessage"> Message:</label>
+      <angular-editor [(ngModel)]="htmlContent" [config]="config" formControlName="firstMessage" id="firstMessage"></angular-editor>
+    </div>
+    <button class="button cursor-pointer" type="submit" >Valider</button>
+  </form>
+</section>
